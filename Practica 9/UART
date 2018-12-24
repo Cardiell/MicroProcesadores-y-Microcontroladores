@@ -1,0 +1,43 @@
+#include <avr/io.h>
+#include <inttypes.h>
+
+
+void UART_Config(void);
+void UART_TxByte(uint8_t data);
+
+
+int main()
+{
+	while(1)
+	{
+
+	}
+	return 0;
+}
+
+void UART_config()
+{
+	UBRR0=103;
+	UCSR0A=0;
+	UCSR0C=0x06;
+	UCSR0B |= (1<<TXEN0) 
+}
+
+void UART_TxByte(uint8_t data)
+{
+	
+
+
+
+
+ISR(ISR_TX0
+-)
+{
+	
+}
+
+
+
+}
+
+//configurar puerto serie

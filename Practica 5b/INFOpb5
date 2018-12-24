@@ -1,0 +1,54 @@
+PPI
+mapeado en la 20
+PA -> 20   8 bits
+PB -> 21   8 bits
+PC -> 22   4 bits
+PD -> 23   si D7 es 1 no e spalabra valida
+
+D7 SIEMPRE DEBE DE ESTAR EN 1 YA QUE SELECCIOA LA PALABRA DE CONTROL
+
+PA,PCL -> salida
+PB,PCH <- Entrada
+------------------
+A=  E/S --->D4
+B=  E/S --->D1
+Ca= E/S --->D3
+Cb= E/S --->D0
+1 = ENTRADA
+0 = SALIDA
+-------------------
+D7  D6D5   D4   D3  D2   D1   D0
+1   0  0    0   1   0    1    0 = 0x8A
+
+MOV DX,23
+MOV AL,8Ah
+OUT DX,AL  -> para 8 bits
+--------------------------------------------
+; PA <- 66   0 11 0 0 1 1 0 = 0X66
+
+MOV DX,20
+MOV AL,66
+OUT DX,AL
+
+TJuino puertos segun Tjuino
+
+------------------------------------------------
+
+CLrbitport pone en 0 con and
+
+notbitPort xor
+
+TestbitPort() 
+
+repetidamente testbit,
+
+8 getchar y con un cable colecta 0 o 1
+
+PA1 como 1
+PB1 como 0
+
+
+pullup
+
+interprete a 10khz
+

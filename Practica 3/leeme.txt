@@ -1,0 +1,2 @@
+El profesor te hace desconectar 3 pines del bus de datos y que corras el programa despues
+te hace conectar esos pines y que desconectes 3 del bus de direcciones.

@@ -1,0 +1,5 @@
+Esta practica es relativamente facil cualquier cosa checar en el pdf de como se calculan los retardos por software
+
+
+para cargar el programa es abrir el XLOADER poner el COM donde se encuentra tu arduino 
+seleccionar el archivo .hex y dar click en upload

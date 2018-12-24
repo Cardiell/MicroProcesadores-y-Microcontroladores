@@ -1,0 +1,11 @@
+Abrir DOSBOX y correr con siguientes instrucciones.
+
+TASM p2.asm
+tcc -c prac2.c
+tlink initj prac2 p2 , practica2
+mkbintj practica2
+practica2
+
+
+El profesor te hace escribir 000000000000000000 y que borres para comprobar que valides
+el backspace que no se coma las letras anteriores

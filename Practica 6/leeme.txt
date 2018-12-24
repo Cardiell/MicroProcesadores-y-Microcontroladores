@@ -1,0 +1,4 @@
+Esta practica no funcionara para el siguiente semestre ya que el profe me dijo que aplicaria otra metrica
+por usar tantos ROR y ROL pero esta practica te genera 44 Instrucciones.
+
+Te hace ingresar 55 00 AA 00 55 00

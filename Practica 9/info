@@ -1,0 +1,153 @@
+Practica 9
+
+Es la practica 2
+
+
+Teraterm
+
+RS-232 el primer tipo de comunicacion era Serial trabajaba en volvtajes positivos y negativos +9 es 0 y -9 es negativo
+
+los bauds son los cambios en la linea
+
+pauqetes de 5 bits hasta 9 bits
+asi que ambos deben de saber cuantos se envian.
+
+si el 6 es 1 es para saber si es comnado o letra
+
+P--> paridad no se usa
+
+el Stopbit -> Sp1 y 2 - > es para que regrese a su estado inicial se usa solo 1 SP1
+por cada 8 bits son 10 bauds
+
+
+
+16Mh/ UBRR+1  /16 o /8
+
+--------------------------------------------
+tarea;
+por que los baudrates son multiplos de 300
+-----------------------------------------------
+BaudRate ->9600
+
+UBRR = (16000000/(16*9600)) -1 = 103.16 se pone la entera = 103
+
+UART DATA REGISTER ---> UDR
+
+UDR siempre habilita una interupcion cuando esta vacio.
+
+
+tienen buffer de 2 bytes el TxD y RxD
+
+
+
+Se ajusta UBRR
+
+UCSRA, UCSRB y UCSRC par que funque esta wea.
+
+
+
+-------------------------------
+U2Xn = UBRR va de la mano con este,,,, doble velocidad o velocidad simple
+MPCMn = para hacer un arduino maestro e interconectarlo
+
+UDRIEn//si no transmitimos desabilitarla para que no se spamee
+TXCIEn
+RXCIEn
+
+
+
+
+
+-----------------------------------------------------
+ 
+//6666,8 bits, no paridad,1 bit de paro.
+
+
+#include <avr/io.h>
+
+void UART0_init(void);
+void UART0_putchar(char data);
+char UART0_getchar(void);
+
+
+int main()
+{
+	UART0_init();
+	while(1)
+	{
+		UART0_putchar('U');
+		UART0_getchar();
+	}
+
+
+}
+
+
+
+void UART0_init(void)
+{
+ // 
+	UBRR0 = 149; // n es el numero de periferico que se debe de usar esto hace referia a los 16 bits
+	UCSR0A = 0; // para asegurarnos que todo este a 0 
+	UCSR0B = (1<<TXEN0)|(1<<RXEN0); 
+	UCSR0C = (3<<UCSZ00);// 8 bits no paridad y reloj asincrono
+
+
+}
+void UART0_putchar(char data)
+{
+	while(!((1<<UDRE0)&(1<<UCSR0A))); // regresa 1 cuando esta vacio...mientras no esta vacio 
+		UDR0 = data; //para mandar el valor por UART
+
+}
+char UART0_getchar(void)
+{
+		while(!((1<<RXC0)&(1<<UCSR0A))); // regresa 1 cuando esta vacio...mientras no esta vacio 
+		return UDR0; //para mandar el valor por UART
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+y el 7 p
+----------------------------------------------------------
+Existia Tx y RX
+
+CLK cada vez que que hay un clk se muestra un bit en TX
+
+USART -> 
+
+
+con UART

@@ -1,0 +1,48 @@
+100 us @ 12Mhz
+#ciclos clk
+
+TCPU = 1/FCPU = 1/12Ms
+
+100 us/(1/12M)s = 1200
+
+ldi R16,n        ;1
+nxt:dec R16      ;n 
+	nop
+	nop
+brne nxt         ;2n-1
+                 ;5n
+
+      n=240
+      256 instrucciones
+
+
+10 ms/(1/12M)s = 120,000
+
+
+
+call       dura 4 y no debe de afectar
+ldi R16,n
+next:    
+	ldi R17,m    ;n
+next2: 
+	dec R17      ;m n
+	brne next2   ;2m-1 n
+dec R16          ; n
+brne next        ;2n-1
+ret        dura 4 
+
+2^6=64
+3m+3 = 1875
+
+m=207
+
+
+
+
+prog 6 delay
+
+
+XLOADER----> el board que tenga el puerto y le metemos el Hex
+
+
+- de 8 nops

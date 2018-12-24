@@ -1,0 +1,4 @@
+El profesor te pregunta que pasa si la direccion de memoria llega a uno mas de tu direccion espejo
+que si lee el dato
+
+A lo cual debes de contestar que si pero que hay un fallo ya que el decodificador no te permite leer ese dato

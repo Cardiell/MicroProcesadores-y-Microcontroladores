@@ -1,0 +1,36 @@
+MICRO
+CORP*
+*ESAD
+SERO*
+*YMIC
+OCOR*
+*NTRO
+ODAL*
+*RES
+
+
+MICR
+RPO*
+*OCE
+DAS*
+*ORE
+
+
+MI
+C*
+*R
+
+
+i=0
+while(i<n){                0,5,10,15,20,25,30,35,1,6,11
+j=i
+while(j< tam){
+   if(cad[j] == '*')
+	 next;
+	x=j
+	j+=5
+}
+i++
+}
+
+

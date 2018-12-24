@@ -1,0 +1,4 @@
+Esta practica falla ya que algunos leds los enciende un poco por el pull up
+
+ el profesor te hace ingresar 01010101
+
